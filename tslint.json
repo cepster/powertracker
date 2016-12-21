@@ -1,0 +1,42 @@
+{
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ],
+  "extends" : "tslint:recommended",
+  "rules": {
+    "no-var-requires" : false,
+    "quotemark": [
+      false
+    ],
+    "max-line-length": [
+      140
+    ],
+    "align": [
+      false
+    ],
+    "object-literal-sort-keys": false,
+    "directive-selector-name": [true, "camelCase"],
+    "component-selector-name": [true, "kebab-case"],
+    "directive-selector-type": [true, "attribute"],
+    "component-selector-type": [true, "element"],
+    "directive-selector-prefix": [true, "app"],
+    "component-selector-prefix": [true, "app"],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-attribute-parameter-decorator": true,
+    "no-inferrable-types": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "no-forward-ref": false,
+    "no-console": [
+      false
+    ],
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "pipe-naming": [true, "camelCase", "app"],
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+    "import-destructuring-spacing": true
+  }
+}
