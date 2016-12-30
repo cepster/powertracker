@@ -2,4 +2,4 @@ Workout tracker for power lifters
 
 Written in Angular 2
 
-TODO
+To start the local server: npm run server:dev

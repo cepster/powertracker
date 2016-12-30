@@ -20,6 +20,13 @@ import { NoContentComponent } from './no-content';
 import { WorkoutComponent } from './workout';
 import { WorkoutItemComponent } from './workout-item';
 
+// Kendo
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+
+// Styles
+import * as test from '../assets/css/styles.scss';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -49,6 +56,8 @@ type StoreType = {
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    ButtonsModule,
+    InputsModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

@@ -5,6 +5,7 @@ import { Workout } from './workout';
 @Component ({
   selector: 'app-workout',
   templateUrl: './workout.component.html',
+  styleUrls: [ './workout.component.css' ],
 })
 export class WorkoutComponent implements OnInit {
   @Input() public workout: Workout;
@@ -20,5 +21,13 @@ export class WorkoutComponent implements OnInit {
     if (!this.workout.workoutItems) {
       this.newWorkoutItem();
     }
+  }
+
+  public previousWorkout() {
+    console.log('TODO: Emit event that previous workout was triggered');
+  }
+
+  public nextWorkout() {
+    console.log('TODO: Emit event that next workout was triggered');
   }
 }

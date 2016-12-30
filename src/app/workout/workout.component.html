@@ -1,10 +1,12 @@
+<div class="workout__navigator">
+  <button kendoButton (click)="previousWorkout()">Go Back</button>
+  <input name="date" [(ngModel)]="workout.workoutDate">
+  <button kendoButton (click)="nextWorkout()">Go Forward</button>
+</div>
 
 <div>
   <label for="name">Workout Name</label>
   <input name="name" [(ngModel)]="workout.workoutName">
-
-  <label for="date">Date</label>
-  <input name="date" [(ngModel)]="workout.workoutDate">
 </div>
 
 <div *ngFor="let item of workout.workoutItems">
