@@ -1,20 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WorkoutItem } from '../workout-item';
+import { Workout } from './workout';
 
 @Component ({
   selector: 'app-workout',
   templateUrl: './workout.component.html',
 })
 export class WorkoutComponent implements OnInit {
-  public workoutName: String;
-  public workoutDate: String;
-  public workoutItems: WorkoutItem[] = [];
+  @Input() public workout: Workout;
 
   public newWorkoutItem() {
-    this.workoutItems.push(new WorkoutItem());
+    this.workout.workoutItems.push(new WorkoutItem());
   }
 
   public ngOnInit() {
-    this.newWorkoutItem();
+    if (!this.workout) {
+      this.workout = new Workout("", "", []);
+    }
+    if (!this.workout.workoutItems) {
+      this.newWorkoutItem();
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AppState } from '../app.service';
+import { Workout } from '../workout';
+import { WorkoutItem } from '../workout-item';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +9,19 @@ import { AppState } from '../app.service';
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
-  // Set our default values
   public localState: any = { value: '' };
-  // TypeScript public modifiers
+  public activeWorkout: Workout;
+  public workouts: Workout[];
+  public index: number;
+
   constructor(public appState: AppState) {
 
   }
 
   public ngOnInit() {
-    console.log('hello `Home` component');
+    let dummyWorkout = new Workout('Alpha', 'Legs', []);
+    dummyWorkout.workoutItems.push(new WorkoutItem("Deadlift", "5x5", []));
+    this.activeWorkout = dummyWorkout;
   }
 
   public submitState(value: string) {
